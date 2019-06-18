@@ -46,6 +46,7 @@ function showArticles(articles){
         productCurrency = articles[i].currency;
 
         htmlContentToAppend += `
+
         <tr>
             <td><img src='`+ articles[i].src + `' width="50px"></td>
             <td>`+ articles[i].name + `</td>
@@ -56,7 +57,8 @@ function showArticles(articles){
         `
 
         document.getElementById("articlesWrapper").innerHTML = htmlContentToAppend;
-
+        document.getElementById("productName").value = articles[i].name;
+        
         updateSubtotal();
 
         document.getElementById("productCount").addEventListener("change", function(){
@@ -193,9 +195,5 @@ document.addEventListener("DOMContentLoaded", function(e){
                 bootbox.alert(msgToShow, null);
             });
         }
-
-        //Esto se debe realizar para prevenir que el formulario se envíe (comportamiento por defecto del navegador)
-        if (e.preventDefault) e.preventDefault();
-            return false;
     });
 });

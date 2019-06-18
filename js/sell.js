@@ -129,18 +129,14 @@ document.addEventListener("DOMContentLoaded", function(e){
                 if (resultObj.status === 'ok')
                 {
                     msgToShow = resultObj.data.msg;
+
+                    bootbox.alert(msgToShow, null);
                 }
                 else if (resultObj.status === 'error')
                 {
                     msgToShow = ERROR_MSG;
                 }
-
-                bootbox.alert(msgToShow, null);
             });
         }
-
-        //Esto se debe realizar para prevenir que el formulario se envíe (comportamiento por defecto del navegador)
-        if (e.preventDefault) e.preventDefault();
-            return false;
     });
 });

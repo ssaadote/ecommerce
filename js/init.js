@@ -1,11 +1,11 @@
-const CATEGORIES_URL = "https://api.myjson.com/bins/tpyd7";
-const PUBLISH_PRODUCT_URL = "https://api.myjson.com/bins/v5pc5";
-const CATEGORY_INFO_URL = "https://api.myjson.com/bins/19vnq3";
-const PRODUCTS_URL = "https://api.myjson.com/bins/eijkr";
-const PRODUCT_INFO_URL = "https://api.myjson.com/bins/mad49";
-const CART_INFO_URL = "https://api.myjson.com/bins/aj865";
-const CART_BUY_URL = "https://api.myjson.com/bins/10ils5"
-
+const SERVER_BASE = "http://localhost:3000";
+const CATEGORIES_URL = SERVER_BASE + "/category/all";
+const CATEGORY_INFO_URL = SERVER_BASE + "/category/?id=1234";
+const PUBLISH_PRODUCT_URL = SERVER_BASE + "/product/";
+const PRODUCTS_URL = SERVER_BASE + "/product/all";
+const PRODUCT_INFO_URL = SERVER_BASE + "/product/?id=5678";
+const CART_INFO_URL = SERVER_BASE + "/cart/?id=987";
+const CART_BUY_URL = SERVER_BASE + "/cart/";
 
 var showSpinner = function(){
   document.getElementById("spinner-wrapper").style.display = "block";

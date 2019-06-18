@@ -63,6 +63,10 @@ document.addEventListener("DOMContentLoaded", function(e){
 
             //Muestro los productos ordenados
             showProductsList(productsArray);
+        }else if (resultObj.status === 'error')
+        {
+            msgToShow = ERROR_MSG;
+            bootbox.alert(msgToShow, null);
         }
     });
 
